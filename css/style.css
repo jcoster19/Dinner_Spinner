@@ -1,0 +1,64 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+
+body{
+  margin:auto;
+  width:100%;
+  height:auto;
+}
+
+
+.main_container{
+  width:80%;
+  margin:auto;
+  padding:auto;
+}
+
+
+.jumbotron{
+  background-color: #53cf92;
+  height:600px;
+  border-radius: 5px;
+  text-align: center;
+}
+.food{
+margin-top:0px;
+width:50%;
+}
+
+
+
+
+h1{
+  font-size: 200%;
+margin:40px;
+  color:#fff;
+}
+
+.wheel{
+  height:300px;
+  width:300px;
+  margin:60px;
+}
+
+.baseline{
+width:100%;
+height:300px;
+background-color: #425E78;
+border-bottom-right-radius: 5px;
+border-bottom-left-radius: 5px;
+position:relative;
+margin-top:-200px;
+}
+
+.click{
+  background-color:#ccc;
+  margin:10px;
+  width:300px;
+  height:40px;
+  border-radius: 2px;
+}
