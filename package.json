@@ -1,0 +1,25 @@
+{
+  "name": "c",
+  "version": "1.0.0",
+  "description": "Ever been lost on where to go out to eat?",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcoster19/Dinner_Spinner.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jcoster19/Dinner_Spinner/issues"
+  },
+  "homepage": "https://github.com/jcoster19/Dinner_Spinner#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "mysql": "^2.13.0",
+    "sequelize": "^3.30.4"
+  }
+}

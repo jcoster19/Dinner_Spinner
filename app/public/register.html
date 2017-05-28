@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang ="en-us">
+<head>
+	<meta charset="UTF-8">
+	<title>Registeration Page</title>
+<!-- BOOTSTRAP CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!-- jQuery   -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="../css/style.css" type="text/css">
+		<script src="../js/register.js" type="text/javaScript">
+		<!-- BOOTSTRAP JS -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<h3>Registration page</h3>
+	<form id="form-register" action="submit">
+		First name: <br>
+		<input type ="text" name="firstname" id="first-name"><br>
+		Last name: <br>
+		<input type ="text" name="lastname" id="last-name"><br>
+		Password: <br>
+		<input type ="text" name="password" id="password"><br>
+		Email Address: <br>
+		<input type ="text" name="email" id="email"><br>
+		Birthdate: <br>
+		<input type ="text" name="birthdate" id="birthdate"><br>
+		<input type="submit" id="form-btn" value="Submit">	
+	</form>
+
+
+<script type ="text/javascript">
+	$("#form-btn").on("click", function(event) {
+		event.preventDefault();
+
+		var users = [];
+
+		var newUser = {
+			firstName: $("#first-name").val(),
+			lastName: $("#last-name").val(),
+			password: $("#password").val(),
+			emailAddress: $("#email").val(),
+			birthdate: $("#birthdate").val()
+		};
+
+		users.push(newUser);
+
+		console.log(users);
+		$.post("/api/new", newUser)
+		.done(function(data) {
+			console.log(data);
+
+			alert("adding");
+		});
+
+		//empty boxes
+		$("#first-name").val("");
+		$("#last-name").val("");
+		$("#password").val("");
+		$("#email").val("");
+		$("#birthdate").val("");
+
+	});
+</script>
+
+
+
+</body>
+</html>
