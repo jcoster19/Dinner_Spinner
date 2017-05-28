@@ -16,6 +16,8 @@
 
 <h3>Registration page</h3>
 	<form id="form-register" action="submit">
+		Username: <br>
+		<input type ="text" name="username" id="username"><br>
 		First name: <br>
 		<input type ="text" name="firstname" id="first-name"><br>
 		Last name: <br>
@@ -37,6 +39,7 @@
 		var users = [];
 
 		var newUser = {
+			username: $("#username").val(),
 			firstName: $("#first-name").val(),
 			lastName: $("#last-name").val(),
 			password: $("#password").val(),

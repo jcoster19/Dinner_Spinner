@@ -10,14 +10,13 @@ var User = require("../models/user.js");
 // =============================================================
 module.exports = function(app) {
 
-  // Search for Specific Character (or all characters) then provides JSON
+  // Search for Specific User (or all characters) then provides JSON
   app.get("/api/:user?", function(req, res) {
 
-    // If the user provides a specific character in the URL...
+    // If the user provides a specific user in the URL...
     if (req.params.user) {
 
       // Then display the JSON for ONLY that character.
-      // (Note how we're using the ORM here to run our searches)
       User.findOne({
         where: {
           name: req.params.user
@@ -51,6 +50,7 @@ module.exports = function(app) {
 
     // Then add the character to the database using sequelize
     User.create({
+      username: user.username,
       firstName: user.firstName,
       lastName: user.lastName,
       emailAddress: user.emailAddress,
