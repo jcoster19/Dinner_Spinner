@@ -40,9 +40,6 @@ https://developers.google.com/places/web-service/get-api-key
 - Jack Coster: https://github.com/jcoster19
 
 
-![cropped headshot smaller](https://cloud.githubusercontent.com/assets/23200274/26382482/7bf1713a-3ffa-11e7-809d-1ce33691ee8d.jpg) 
-
-
 - Moh Kemal: https://github.com/mrkem598
 
 - David Han: https://github.com/dhan30
